@@ -33,33 +33,43 @@ body {
     background-position: center center;
 }
 
-.header .barra {
+.header-2 {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    background-image: linear-gradient(to right, rgba(13, 29, 43, 0.888), rgba(9, 9, 44, 0.897));
+}
+
+.barra {
     display: flex;
     justify-content: space-between;
 }
 
-.header .navegacion {
+.navegacion {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.header .navegacion a {
+.navegacion a {
     text-decoration: none;
     color: var(--blanco);
 
 }
 
-.header .navegacion a:hover {
+.navegacion a:hover {
     color: var(--primario);
     border-bottom: 1px solid var(--primario);
 }
 
 .barra .logo {
     width: 300px;
+    cursor: pointer;
 }
 
-h1 {
+header h1 {
     margin-bottom: 190px;
     text-align: center;
     color: var(--blanco);
@@ -69,7 +79,7 @@ h1 {
 }
 
 @media (max-width: 500px) {
-    .header .barra {
+    .barra {
         flex-direction: column;
         align-items: center;
         gap: 15px;
