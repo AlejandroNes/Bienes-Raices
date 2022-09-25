@@ -1,0 +1,234 @@
+/* ESTILOS DE CSS */
+:root {
+    --primario: #f25645;
+    --secundario: #da3522;
+    --blanco: rgb(240, 248, 255);
+    --oscuro: rgb(29, 43, 59);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0px;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* UTILIDADES */
+.text-center {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    background-image: linear-gradient(to right, rgba(12, 32, 48, 0.582), rgba(12, 12, 60, 0.646)), url("../img/header.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.header-2 {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    background-image: linear-gradient(to right, rgba(13, 29, 43, 0.888), rgba(9, 9, 44, 0.897));
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: var(--blanco);
+
+}
+
+.navegacion a:hover {
+    color: var(--primario);
+    border-bottom: 1px solid var(--primario);
+}
+
+.barra .logo {
+    width: 300px;
+    cursor: pointer;
+}
+
+header h1 {
+    margin-bottom: 190px;
+    text-align: center;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 50px;
+    opacity: .2;
+}
+
+@media (max-width: 550px) {
+    .barra {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* NOSOTROS */
+.titulo-nosotros {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.nosotros {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15px;
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid rgb(219, 222, 224);
+    border-radius: 8px;
+}
+
+.card .imagen {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    text-align: center;
+}
+
+@media (max-width: 550px) {
+    .nosotros {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* seccion-anuncios */
+.titulo-anuncios {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.seccion-anuncios {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.anuncio {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgb(191, 196, 201);
+}
+
+hr {
+    margin: 15px;
+    background-color: rgba(211, 226, 237, 0.005);
+}
+
+.contenido-anuncio h3 {
+    text-align: center;
+    padding: 15px 0px;
+    text-transform: uppercase;
+}
+
+.contenido-anuncio .precio {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.iconos-caracteristicas {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos-caracteristicas div {
+    display: flex;
+
+}
+
+.iconos-caracteristicas div p {
+    font-weight: 700;
+    color: green;
+
+}
+
+.boton-anuncio {
+    border: none;
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 10px;
+    margin: 20px 0px 10px 0px;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.boton-anuncio:hover {
+    background-color: var(--secundario);
+
+}
+
+@media (max-width: 500px) {
+    .seccion-anuncios {
+        grid-template-columns: 1fr;
+    }
+}
